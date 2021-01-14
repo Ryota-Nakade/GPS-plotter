@@ -1,7 +1,7 @@
 ## python2
 # This progmram converts bag file to txt (python2)
 # To run this program, enter below command in terminal.
-# $ python gps_extract_NR.py
+# $ python gps_extract_GUI.py
 
 import rosbag
 import os
@@ -25,9 +25,9 @@ def export(bagPath, topicName, txtPath):
 	print('Done!!')
 
 if __name__ == '__main__':
-	print("Choose bagfile")
+	print("Select bagfile")
 	bagPath = fd.askopenfilename(
-	    title = "Choose a ROSBAG file",
+	    title = "Select a ROSBAG file",
 	    filetypes=[("BAG", ".bag")]
     	)
 	print("Input export-txt-file")

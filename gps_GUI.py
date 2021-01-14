@@ -2,7 +2,7 @@
 
 # This program plots gps-data on Google-map. 
 # To run this program, enter below command in terminal.
-# $ python3 gps_NR.py
+# $ python3 gps_GUI.py
 
 import numpy as np
 import gmplot
@@ -11,8 +11,9 @@ import gmplot
 import tkinter
 from tkinter import filedialog
 
-# Not to show tkinter-window
+# Create root window
 root = tkinter.Tk()
+# Not to show tkinter-window
 root.withdraw()
 
 # take position from Log -------------
@@ -47,7 +48,7 @@ htmlPath = filedialog.asksaveasfilename(
 	    defaultextension = ".html",
 	    title = "Input export GPS-html file",
 	    filetypes=[("HTML", ".html"),("ALL","*")]
-    	)
+	)
 gmap.draw(htmlPath)
 
 
